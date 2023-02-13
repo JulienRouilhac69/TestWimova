@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>firstname</th>
+            <th>lastname</th>
+            <th>phone</th>
+            <th>age</th>
+            <th>mail</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php   if (!$users){
+                foreach( $user as $users) {
+    ?>
+                    <tr>
+                        <td><?php $user[firstname] ?></td>
+                        <td><?php $user[lastname] ?></td>
+                        <td><?php $user[phone] ?></td>
+                        <td><?php $user[age] ?></td>
+                        <td><?php $user[mail] ?></td>
+                    </tr>
+    <?php       }
+            }
+            else {?>
+            <tr>
+                <td colspan="2">no records found</td>
+            </tr>
+    <?php   } 
+    ?>
+    </tbody>
+</table>
